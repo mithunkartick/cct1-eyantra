@@ -56,8 +56,8 @@ pass_threshold = 275 # Set the passing threshold here
 
 def checkifpass(pass_threshold, student_data):
     for key, val in student_data.items():
-        total=sum(val)
-        if total > pass_threshold:
+        avg=sum(val)/len(val)
+        if avg > pass_threshold:
             print(key, "- PASS")
         else:
             print(key, "- FAIL")

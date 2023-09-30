@@ -31,16 +31,16 @@
 
 def print_pattern(rows):
     n=1 # start from #
-    no=0
+    list=[0]
     for i in range(1, rows+1):
-        for j in range(n, i+no):
+        h=0
+        for j in range(n, i+n+list[i-1]):
             print("{:02d}".format(j), end=" ")
             n+=1
-            no+=i
-            
+            h+=1
+        list.append(h)
         print('')
-
-rows = 5 # You can change this value to match the number of rows in your pattern
+rows = int(input("Enter the number of rows: ")) # You can change this value to match the number of rows in your pattern
 print_pattern(rows)
 
 
